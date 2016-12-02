@@ -5,7 +5,9 @@
   "author": "Cory House",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node tools/srcServer.js"  
+    "start": "babel-node tools/srcServer.js",
+    "lint": "node_modules/.bin/esw webpack.config.* tools src",
+    "lint:watch": "npm run lint -- --watch"
   },
   "dependencies": {
     "babel-polyfill": "6.8.0",
