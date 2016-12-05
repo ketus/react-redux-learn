@@ -5,7 +5,8 @@
   "author": "Cory House",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node tools/srcServer.js",
+    "start": "npm-run-all --parallel run:server lint:watch",
+    "run:server": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* tools src",
     "lint:watch": "npm run lint -- --watch"
   },
@@ -13,6 +14,7 @@
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
     "jquery": "2.2.3",
+    "npm-run-all": "^1.8.0",
     "react": "15.0.2",
     "react-dom": "15.0.2",
     "react-redux": "4.4.5",
